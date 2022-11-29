@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-for c in range(ord('a'), ord('z') + 1):
-if c not in (ord('q'), ord('e')):
-print("{:c}".format(c), end='')
+for az in range(97, 123):
+if ((az == 101) or (az == 113)):
+    continue
+    print("{}".format(chr(az)), end='')
