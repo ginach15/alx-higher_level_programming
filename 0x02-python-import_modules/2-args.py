@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import calculator_1 as calc
     import sys
     if len(sys.argv) == 1:
         print("0 arguments.".format())
