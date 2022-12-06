@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for row in matrix:
-        for column in row:
-            print("{:d}".format(column), sep='', end='')
-            if (column != row[len(row) - 1]):
-                print(' ', end='')
-    print()i
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            print("{:d}".format(matrix[i][j]), end='')
+            if j < len(matrix[i]) - 1:
+                print(" ".format(), end='')
+        print("".format())
