@@ -50,7 +50,7 @@ class Square:
 
         if type(value) is not int:
             raise TypeError("size must be an integer")
-            else:
+        else:
             if value < 0:
                 raise ValueError("size must be >= 0")
             else:
