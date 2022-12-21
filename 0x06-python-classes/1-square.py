@@ -1,11 +1,23 @@
 #!/usr/bin/python3
-""" Square class """
+
+"""This module makes a class Square and has a private instance attribute size.
+
+"""
+
 class Square:
-     """ empty class Square that defines a square
+
+    """a square is a parallelogram
 
     Attributes:
-        size: size of the square
-     """
-     __size = 0
+
+    __size: instantiates Square with size
+
+    """
+
     def __init__(self, size=0):
+
+        """this function instantiates with size private instance attribute
+
+        """
+
         self.__size = size
