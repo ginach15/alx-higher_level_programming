@@ -3,6 +3,7 @@
 """This module makes a class Square and has a private instance attribute size.
 """
 
+
 class Square:
 
     """a square is a parallelogram
@@ -24,9 +25,9 @@ class Square:
             raise ValueError
         else:
             self.__size = size
-            def area(self):
+    def area(self):
 
-                """this function returns the area of the square
-                """
+         """this function returns the area of the square
+        """
 
-                return self.__size ** 2
+        return self.__size ** 2
