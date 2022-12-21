@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-"""This module makes a class Square and has a private instance attribute size.
-"""
+""" Square class """
 
 
 class Square:
-    """a square is a parallelogram
+    """ empty class Square that defines a square
     Attributes:
-    __size: instantiates Square with size
-    size must be an integer that is 0 or greater
+    size: size of the square
     """
 
-    def __init__(self, size=0):
-        """this function instantiates with size private instance attribute
-        """
+    __size =0
 
-        if not isinstance(size, int):
-            print("size must be an integer", end="")
-            raise TypeError
-        elif size < 0:
-            print("size must be >= 0", end="")
-            raise ValueError
-        else:
-            self.__size = size
+    def __init__(self, prmSize=0):
+        self.size = prmSize
 
-    def area(self):
-        """this function returns the area of the square
-        """
+        def area(self):
+            return self.__size ** 2
+        @property
+        
+        def size(self):
+            return self.__size
 
-        return self.__size ** 2
+        @size.setter
+        def size(self, prmSize=0):
+            if not isinstance(prmSize, int):
+                raise TypeError("size must be an integer")
+            elif prmSize < 0:
+                raise ValueError("size must be >= 0")
+            self.__size = prmSize
