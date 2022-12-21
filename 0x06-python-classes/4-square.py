@@ -2,6 +2,7 @@
 """This module makes a class Square and has a private instance attribute size.
 """
 
+
 class Square:
     """a square is a parallelogram
     Attributes:
@@ -26,4 +27,4 @@ class Square:
         """this function returns the area of the square
         """
 
-                return self.__size ** 2
+        return self.__size ** 2
