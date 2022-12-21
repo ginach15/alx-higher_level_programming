@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ Square class """
+
 class Square:
     """ empty class Square that defines a square
     Attributes:
-    size: size of the square
+        size: size of the square
     position: square margins
     """
 
@@ -26,7 +27,7 @@ class Square:
     def size(self, prmSize=0):
         if not isinstance(prmSize, int):
             raise TypeError("size must be an integer")
-            elif prmSize < 0:
+        elif prmSize < 0:
             raise ValueError("size must be >= 0")
             self.__size = prmSize
     def my_print(self):
