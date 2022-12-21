@@ -1,48 +1,49 @@
 #!/usr/bin/python3
+""" Square class """
 class Square:
-      def __init__(self, size=0, position=(0, 0)):
-          if not isinstance(size, int):
-              raise TypeError("size must be an integer")
-          elif size < 0:
-              raise ValueError("size must be >= 0")
-          else:
-              self.__size = size
-              if type(position) is not tuple:
-                  raise TypeError("position must be a tuple of 2 positive integers")
-              elif len(position) != 2:
-                  raise TypeError("position must be a tuple of 2 positive integers")
-              elif not isinstance(position[0], int):
-                  raise TypeError("position must be a tuple of 2 positive integers")
-              elif not isinstance(position[1], int):
-                  raise TypeError("position must be a tuple of 2 positive integers")
-              elif position[0] < 0 or position[1] < 0:
-                  raise TypeError("position must be a tuple of 2 positive integers")
-              else:
-                  self.__position = position
-                  def area(self):
-                      return self.__size ** 2
-                   @property
-                   def size(self):
-                       return self.__size
-                   @size.setter
-                   def size(self, value):
-                       self.__size = value
-                       @property
-                       def position(self):
-                           return self.__position
-                       @position.setter
-                       def position(self, value):
-                           self.__position = value
+    """ empty class Square that defines a square
+    Attributes:
+    size: size of the square
+    position: square margins
+    """
 
-                           def my_print(self):
-                               if self.__size == 0:
-                                   print()
-                               else:
-                                   for emptyrow in range(0, self.__position[1]):
-                                       print()
-                                       for row in range(0, self.__size):
-                                           for space in range(0, self.__position[0]):
-                                               print(" ", end="")
-                                               for octothorpe in range(0, self.__size):
-                                                   print("#", end="")
-                                                   print()
+
+    __size = 0
+    __position = 0
+
+    def __init__(self, prmSize=0, prmPosition=(0, 0)):
+        self.size = prmSize
+        self.position = prmPosition
+
+    def area(self):
+        return self.__size ** 2
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, prmSize=0):
+        if not isinstance(prmSize, int):
+            raise TypeError("size must be an integer")
+            elif prmSize < 0:
+            raise ValueError("size must be >= 0")
+            self.__size = prmSize
+    def my_print(self):
+        if self.size == 0:
+            print()
+        else:
+            for row in range(self.position[1]):
+                print()
+            for column in range(self.size):
+                print("{}{}".format(" " * self.position[0], "#" * self.size))
+    @property
+    def position(self):
+        return self.__position
+    @position.setter
+    def position(self, prmPosition):
+        if (not isinstance(prmPosition, tuple) or
+            list(map(type, prmPosition)) != [int, int] or
+            sum(0 if i >= 0 else 1 for i in prmPosition)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+            self.__position = prmPosition
