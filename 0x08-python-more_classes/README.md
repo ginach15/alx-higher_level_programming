@@ -15,3 +15,4 @@ Project on  More Classes and Objects
 |7. Change representation |a class that defines a rectangle(based on task 6 |
 |8. Compare rectangles |a class that defines a rectangle (based on task 7  |
 |9. A square is a rectangle |a class that defines a rectangle(based on task 8 |
+|101. nqueens| Backtracking algorithm that solves the N-Queen puzzle |
