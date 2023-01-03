@@ -1,2 +1,3 @@
 # alx-higher_level_programming
-this is my python script
+python is highly object orinted programming
+
